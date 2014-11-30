@@ -1,0 +1,82 @@
+<div class="well">
+
+  <div class="row">
+    <div class="col-xs-8">
+      <h4><%= product.name %></h4>
+    </div>
+    <div class="col-xs-4">
+      
+      <%= form_for order_item do |f| %>
+        <h4 class="text-right">Unit Price: <span style="color: green"><%= number_to_currency order_item.unit_price %></span></h4>
+        <div class="row">
+          <div class="col-xs-4">
+            <%= f.number_field :quantity, value: order_item.quantity.to_i, class: "form-control", min: 1 %>
+            <%= f.hidden_field :product_id, value: product.id %>
+          </div>
+          <div class="col-xs-8 text-right">
+            <div class="btn-group">
+              <%= f.submit "Update Quantity", class: "btn btn-primary" %>
+              <%= link_to "Delete", order_item, { data: { confirm: "Are you sure you wish to delete the product '#{order_item.product.name}' from your carts?" }, method: :delete, class: "btn btn-danger" } %>
+
+              <%#
+              = link_to "Delete", order_item, { data: { confirm: "Are you sure you wish to delete the product '#{order_item.product.name}' from your carts?" }, method: :delete, class: "btn btn-danger" } %>
+            </div>
+          </div>
+        </div>
+        <h4 class="text-right">Total Price: <span style="color: green"><%= number_to_currency order_item.total_price %></span></h4>
+      <% end %>
+    </div>
+    
+    
+  </div>
+</div>
+
+
+<%= form_for order_item  do |f| %>
+<%# render 'order_items/error_form' %>
+
+<%= f.hidden_field :stripe_card_token %>
+
+<div class="field">
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+</div>
+<%# if @order_item.stripe_card_token.present? %>
+  Credit card has been provided.
+<%# else %>
+  <div class="field">
+    <%= label_tag :card_number, "Credit Card Number" %>
+    <%= text_field_tag :card_number, nil, name: nil %>
+  </div>
+  <div class="field">
+    <%= label_tag :card_code, "Security Code on Card (CVV)" %>
+    <%= text_field_tag :card_code, nil, name: nil %>
+  </div>
+  <div class="field">
+    <%= label_tag :card_month, "Card Expiration" %>
+    <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
+    <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
+  </div>
+<%# end %>
+<div id="stripe_error">
+  <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
+</div>  
+
+  <div class="field">
+    <%#= f.label :product_id %><br>
+    <%#= f.number_field :product_id %>
+  </div>
+  <div class="field">
+    <%#= f.label :user_id %><br>
+    <%#= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%#= f.label :admin_id %><br>
+    <%#= f.number_field :admin_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>  
