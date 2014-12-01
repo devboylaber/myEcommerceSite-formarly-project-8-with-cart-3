@@ -25,8 +25,9 @@
         </div>
         <h4 class="text-right">Total Price: <span style="color: green"><%= number_to_currency order_item.total_price %></span></h4>
       <% end %>
+      <%= link_to 'Checkout', charges_path %>
     </div>
-    
+    # (user.id), method: :put
     
   </div>
 </div>
