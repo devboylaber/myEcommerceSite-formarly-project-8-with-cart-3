@@ -126,11 +126,12 @@ h1#logo a { display: block; background: url(/images/logo.png) no-repeat 0 0; hei
 .products-slider .nav a.prev { background: url(/images/prev-nav.png) no-repeat 0 0; left: -15px; }
 .products-slider .nav a.next { background: url(/images/next-nav.png) no-repeat 0 0; right: -14px; }
 
+// #footer * {border: 1px solid black;}
 #footer, #footer-push { height: 296px; overflow: hidden; }
 #footer { background: #1a719e url(/images/footer-bg.png) repeat-x 0 0; padding: 24px 0 0 0; }
 #footer .cols { width: 980px; overflow: hidden; min-height: 238px; }
 #footer .cols ul { position: relative; }
-#footer .cols .col { width: 224px; float: left; display: inline; padding: 0 25px 0 0; }
+#footer .cols .col { width: 224px; float: left; display: inline; padding: 0 25px 0 0; border: 1px solid black; }//WWWWWWWWW
 #footer .col h4 { font-style: italic; font-family: georgia, serif; padding: 0 0 7px 5px; border-bottom: dotted 2px #3799cb; margin-bottom: 15px; }
 #footer .col p { color: #90c6e2; padding: 0 0 12px 0; }
 #footer .col a { color: #104662; }

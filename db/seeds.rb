@@ -59,6 +59,7 @@ Order.create! id: 2
 Order.create! id: 3
 Order.create! id: 4
 Order.create! id: 5
+Order.create! id: 6
 1.times do |n|
   User.create(email: "user@user.com", 
   	             password: "useruser",
