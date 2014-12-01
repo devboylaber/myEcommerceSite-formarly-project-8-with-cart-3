@@ -17,7 +17,7 @@
         <div id="main-slider">
             <div id="slider-holder">
                 <ul><% @products.each do |product| %>
-                    <%= image_tag product.slide_image.url(:large) %>
+                    <%= image_tag product.slideimage.url(:large) %>
                     <% end %>
                     <li>
                         <div class="cnt">
