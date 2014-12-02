@@ -16,10 +16,12 @@
         <!-- Slider -->
         <div id="main-slider">
             <div id="slider-holder">
-                <ul><% @products.each do |product| %>
-                    <%= image_tag product.slideimage.url(:large) %>
-                    <% end %>
-                    <li>
+                <ul><%# @products.each do |product| %>
+                    <%#= image_tag product.slideimage.url(:large) %>
+                    <%# end %>
+                    <!--  <img src="/images/fish-dorado.jpg"> -->
+                    <li style="background-color: #fff;">
+                        <img src="/images/fish-dorado.jpg">
                         <div class="cnt">
                             <h4>
                                 Enjoy our delecious Fish
