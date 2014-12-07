@@ -1,7 +1,9 @@
 class OrderItemsController < ApplicationController
   # before_action :set_order_item, only: [:show, :edit, :update, :destroy]
   def index
-    @order_items = OrderItem.all
+    @order_items = current_order.order_items
+    render(@cart)
+    # @order_items = OrderItem.all
   end
   def show
     @order_item = OrderItem.find(params[:id])

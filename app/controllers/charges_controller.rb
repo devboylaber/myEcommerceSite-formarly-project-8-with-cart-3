@@ -1,10 +1,15 @@
 class ChargesController < ApplicationController
 
 	def index
-	end
+	    @charges = Charges.all
+	end 
 	def new 
+		@charges = Charges.new
+		# format.html { render :action => "carts" }
+		# render :carts
 	end
 	def create
+		# redirect_to :carts
 		
 		# Set your secret key: remember to change this to your live secret key in production
 		# See your keys here https://dashboard.stripe.com/account
