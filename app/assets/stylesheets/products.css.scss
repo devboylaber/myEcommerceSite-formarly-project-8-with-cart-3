@@ -29,17 +29,20 @@
 }
 .image-show-wrap {
 	padding: 2% 0 2% 0;
+	width: 30%;
+	margin: 0 auto;
+	border: 1px solid black;
 }
 .price-show-wrap {
-	font-size: 26px;
-	line-height: 40px;
-	margin-left: 100px;
-	display: inline;
+	width: 30%;
+	margin: 0 auto;
 	font-style: normal;
 	color: #1898d6;
 	font-weight: bold;
 	font-family: georgia, serif;
 }
 .description-show-wrap {
-	border: 1px solid black;
+	width: 30%;
+	margin: 0 auto;
+	// border: 1px solid black;
 }
