@@ -14,6 +14,8 @@ class OrderItem < ActiveRecord::Base
 
   before_save :finalize
 
+  
+
   def unit_price
     if persisted?
       self[:unit_price]
