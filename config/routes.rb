@@ -24,7 +24,7 @@ Rails.application.routes.draw do
     root "products#index"
     
     get '/' => 'product#index'
-  # end
+  # end 
 
 
   # resources :orders
