@@ -11,11 +11,8 @@
 
 # while i < 5 do
 
-1.times do
- Product.create(
-                 slideimage: File.new("#{Rails.root}/public/images/fish-dorado.jpg")
-                 )
-end
+
+
 1.times do
  Product.create(name: "Tasty Fish", 
                  description: "Fried", 
@@ -118,20 +115,9 @@ puts "Sample products created"
 OrderStatus.delete_all
 OrderStatus.create! id: 1, name: "In Progress"
 puts "Generating sample users"
-Order.create! id: 1
-Order.create! id: 2
-Order.create! id: 3
-Order.create! id: 4
-Order.create! id: 5
-Order.create! id: 6
-Order.create! id: 7
-Order.create! id: 8
-Order.create! id: 9
-Order.create! id: 10
-Order.create! id: 11
-Order.create! id: 12
 
-Order.create! id: 14
+
+Order.create! id: 15
 1.times do |n|
   User.create(email: "user@user.com", 
                  password: "useruser",
