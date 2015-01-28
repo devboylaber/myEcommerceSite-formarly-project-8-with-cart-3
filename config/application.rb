@@ -9,9 +9,9 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 
-config.action_dispatch.default_headers = {
-    'X-Frame-Options' => 'ALLOWALL'
-}
+# config.action_dispatch.default_headers = {
+#     'X-Frame-Options' => 'ALLOWALL'
+# }
 
 module Project5
   class Application < Rails::Application
