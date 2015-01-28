@@ -9,9 +9,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 
-# config.action_dispatch.default_headers = {
-#     'X-Frame-Options' => 'ALLOWALL'
-# }
+
 
 module Project5
   class Application < Rails::Application
@@ -27,4 +25,9 @@ module Project5
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
   end
+
+config.action_dispatch.default_headers.merge!({'X-Frame-Options' => 'ALLOWALL'})
+#   config.action_dispatch.default_headers = {
+#     'X-Frame-Options' => 'ALLOWALL'
+# }
 end
