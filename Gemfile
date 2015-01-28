@@ -27,13 +27,14 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # gem 'sqlite3'
+gem 'rake', '~> 10.4.2'
 
 group :development do
-    gem 'sqlite3'
+    gem 'sqlite3', '1.3.10'
   end
 group :production do
-    gem 'pg' 
-    gem 'rails_12factor'
+    gem 'pg', '0.17.1'
+    gem 'rails_12factor', '0.0.3'
 end
 
 
