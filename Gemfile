@@ -37,8 +37,9 @@ group :production do
     gem 'rails_12factor', '0.0.3'
 end
 
-
-
+# sass-rails
+# html2html
+# haml
 
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
